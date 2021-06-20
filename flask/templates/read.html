@@ -1,0 +1,178 @@
+{% extends 'base.html'%}
+{% block head %}
+<style>
+    .card .card-title {
+        text-align: center;
+        color: white;
+        font-size: 15px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+
+    .search-btn {
+        border: 2px solid #D24D57;
+        width: 200px;
+        padding: 14px 15px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        border-radius: 0;
+        background-color: black;
+    }
+
+    .search-btn:hover {
+        background-color: #D24D57;
+        color: #fff;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card"
+            style=" background-color:black; width: 250px;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[0] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style="border: none; background-color: black; color: white; text-align: center;"> {{ book[0] }} </textarea>
+                    <input type="hidden" value="{{ image[0] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[1] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style=" border:none;background-color: black; color: white; text-align: center;"> {{ book[1] }} </textarea>
+                    <input type="hidden" value="value={{ image[1] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[2] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style="border:none; background-color: black; color: white; text-align: center;"> {{ book[2] }} </textarea>
+                    <input type="hidden" value="{{ image[2] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[3] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style="border:none;background-color: black; color: white; text-align: center;"> {{ book[3] }} </textarea>
+                    <input type="hidden" value="{{ image[3] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[4] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style="border:none; background-color: black; color: white; text-align: center;"> {{ book[4] }} </textarea>
+                    <input type="hidden" value="{{ image[4] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[5] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style="border:none; background-color: black; color: white; text-align: center;"> {{ book[5] }} </textarea>
+                    <input type="hidden" value="{{ image[5] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[6] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style="border:none;background-color: black; color: white; text-align: center;"> {{ book[6] }} </textarea>
+                    <input type="hidden" value="{{ image[6] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[7] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style="border:none;background-color: black; color: white; text-align: center;"> {{ book[7] }} </textarea>
+                    <input type="hidden" value="{{ image[7] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card"
+            style="width: 250px; background-color:black;display: block; text-align: center; margin-bottom: 10px;">
+            <img class="card-img-top" src="{{ image[8] }}" alt="k" style="width: 180px;">
+            <div class="card-body">
+                <form action="{{ url_for('info')}}" method="POST">
+                    <textarea rows="2" name="results" id="myTextArea" readonly
+                        style=" border:none; background-color: black; color: white; text-align: center;"> {{ book[8] }} </textarea>
+                    <input type="hidden" value="{{ image[8] }}" name="l" readonly><br>
+                    <input type="submit" value="Know More" class="search-btn"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
