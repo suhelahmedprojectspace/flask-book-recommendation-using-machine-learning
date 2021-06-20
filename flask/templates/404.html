@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block head %}
+<style>
+    .error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .l {
+        font-size: larger;
+        letter-spacing: 4px;
+        color: white;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="error">
+    <div class="l">
+        <h1>404! The books you are looking is not available in our dataset</h1>
+    </div>
+</div>
+
+{% endblock %}
