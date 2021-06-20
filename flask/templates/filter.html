@@ -1,0 +1,79 @@
+{% extends 'base.html'%}
+{% block head %}
+<style>
+    p {
+        color: white;
+    }
+
+    .big {
+        margin-top: 50px;
+    }
+
+    .container1,
+    .container2,
+    .container3 {
+        margin: 17px;
+    }
+
+    .btn {
+        border: 2px solid #D24D57;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 100px;
+        width: 200px;
+        padding: 14px 15px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        border-radius: 0;
+
+    }
+
+    .btn:hover {
+        background-color: #D24D57;
+        color: #fff;
+    }
+</style>
+{% endblock %}
+{% block body %}
+
+
+<p class="h2 text-center mt-3 ">Select Any 3 favourite authors</p>
+<form action="{{ url_for('filter_take')}}" method="POST">
+
+    <div class="big">
+
+        <div class="container1">
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="choice1">
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="container2">
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="choice2">
+                {% for o in data2 %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+        <div class="container3">
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="choice3">
+                {% for o in data3 %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-sm">Submit</button>
+    </div>
+</form>
+
+{% endblock %}
