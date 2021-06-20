@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+{% block head %}
+<style>
+    .navbar-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .search {
+        width: 90vw;
+        padding: 14px 15px;
+        border-radius: 2px;
+        border: none;
+    }
+
+    .search-btn {
+        border: 2px solid #D24D57;
+        width: 200px;
+        padding: 14px 15px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        border-radius: 0;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 70px;
+    }
+
+    .search-btn:hover {
+        background-color: #D24D57;
+        color: #fff;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<form action="{{url_for('search')}}" , class="navbar-form" role="search" ,method="POST">
+    <input type="text" placeholder="Search Books" class="search mb-3" name="search">
+    <button class="search-btn">Search</button>
+</form>
+
+{% endblock %}
