@@ -1,0 +1,13 @@
+create a new folder with any name and inside its placed the flask folder and the csv files
+and then run this commands below on your vs code terminal
+
+1)pip install numpy
+2)pip install pandas
+3)pip install flask
+4)pip install scikit-learn
+5)pip install requests
+
+and don't forget to change the file location
+ie under create model function
+pd.read_csv('< full file location>'/file.csv)
+
