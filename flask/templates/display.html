@@ -1,0 +1,124 @@
+{% extends 'base.html'%}
+{% block head %}
+<style>
+    .cards-list {
+        z-index: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 30px;
+        width: 300px;
+        height: 280px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .card .card-body {
+        padding: 20px;
+    }
+
+    .card:hover {
+        box-shadow: 2px 2px 10px 5px white;
+    }
+
+
+    @media all and (max-width: 500px) {
+        .card-list {
+            /* On small screens, we are no longer using row direction but column */
+            flex-direction: column;
+        }
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="cards-list">
+    <div class="card" style=" background: #FF8008;">
+        <div class="card-body">
+            <h5 class="card-title"
+                style="letter-spacing: 2px; font-size: 20px;  font-weight:bold;color:white; padding-bottom:30px ;">{{
+                book1_name[0]}}</h5>
+            <p class="card-author" style="color: white; letter-spacing: 2px;"><strong>Author : </strong>{{ choice1 }}
+            </p>
+            <p class="card-rating" style="color: white; letter-spacing: 1px;"><strong>Rating:</strong>{{ book1_rating[0]
+                }}/10</p>
+            <p class="card-isbn" style="color: white; letter-spacing: 1px;"><strong>isbn:</strong>{{ book1_isbn[1] }}
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="card" style="background: #EB3349; ">
+        <div class="card-body">
+            <h5 class="card-title"
+                style="letter-spacing: 2px; font-size: 20px;  font-weight:bold;color:white; padding-bottom:30px ;">{{
+                book1_name[1]}}</h5>
+            <p class="card-author" style="color: white; letter-spacing: 2px;"><strong>Author:</strong>{{ choice1 }}</p>
+            <p class="card-rating" style="color: white; letter-spacing: 2px;"><strong>Rating:</strong>{{ book1_rating[1]
+                }}/10</p>
+            <p class="card-isbn" style="color: white; letter-spacing: 2px;"><strong>isbn:</strong>{{ book1_rating[1] }}
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card" style=" background: #FF512F;  ">
+        <div class="card-body">
+            <h5 class="card-title"
+                style="letter-spacing: 2px; font-size: 20px;  font-weight:bold;color:white; padding-bottom:30px ;">{{
+                book2_name[0] }}</h5>
+            <p class="card-author" style="color: white; letter-spacing: 2px;"><strong>Author:</strong>{{ choice2 }}</p>
+            <p class="card-rating" style="color: white; letter-spacing: 2px;"><strong>Rating:</strong>{{ book2_rating[0]
+                }}/10</p>
+            <p class="card-isbn" style="color: white; letter-spacing: 2px;"><strong>isbn:</strong>{{ book2_isbn[0] }}
+            </p>
+        </div>
+    </div>
+
+    <div class="card" style="background: #DA22FF;">
+        <div class="card-body">
+            <h5 class="card-title"
+                style="letter-spacing: 2px; font-size: 20px;  font-weight:bold;color:white; padding-bottom:30px ;">{{
+                book2_name[1] }}</h5>
+            <p class="card-author" style="color: white; letter-spacing: 2px;"><strong>Author:</strong>{{ choice2 }}</p>
+            <p class="card-rating" style="color: white; letter-spacing: 2px;"><strong>Rating:</strong>{{ book2_rating[1]
+                }}/10</p>
+            <p class="card-isbn" style="color: white; letter-spacing: 2px;"><strong>isbn:</strong>{{ book2_isbn[1] }}
+            </p>
+        </div>
+    </div>
+
+    <div class="card" style="background: #D31027;">
+        <div class="card-body">
+            <h5 class="card-title"
+                style="letter-spacing: 2px; font-size: 20px;  font-weight:bold;color:white; padding-bottom:30px ;">{{
+                book3_name[0] }}</h5>
+            <p class="card-author" style="color: white; letter-spacing: 2px;"><strong>Author:</strong>{{ choice3 }}</p>
+            <p class="card-rating" style="color: white; letter-spacing: 2px;"><strong>Rating:</strong>{{ book3_rating[0]
+                }}/10</p>
+            <p class="card-isbn" style="color: white; letter-spacing: 2px;"><strong>isbn:</strong>{{ book3_isbn[0] }}
+            </p>
+        </div>
+    </div>
+
+    <div class="card" style="background: #FF416C; ">
+        <div class="card-body">
+            <h5 class="card-title"
+                style="letter-spacing: 2px; font-size: 20px;  font-weight:bold;color:white; padding-bottom:30px ;">{{
+                book3_name[1] }}</h5>
+            <p class="card-author" style="color: white; letter-spacing: 2px;"><strong>Author:</strong>{{ choice3 }}</p>
+            <p class="card-rating" style="color: white; letter-spacing: 2px;"><strong>Rating:</strong>{{ book3_rating[1]
+                }}/10</p>
+            <p class="card-isbn" style="color: white; letter-spacing: 2px;"><strong>isbn:</strong>{{ book3_isbn[1] }}
+            </p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
