@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+
+
+{% block body %}
+<div class="container">
+
+    <div class="card">
+        <div class="row">
+            <aside class="col-sm-5 border-right">
+                <article class="gallery-wrap">
+                    <div class="img-big-wrap" style="text-align: center;">
+                        <div><br>
+                            <img src="{{ book_image }}" alt="Not found" style="margin-bottom: 5px;">
+                        </div>
+                    </div> <!-- slider-product.// -->
+                </article> <!-- gallery-wrap .end// -->
+            </aside>
+            <aside class="col-sm-7">
+                <article class="card-body p-5">
+                    <h3 class="title mb-3">{{ title }}</h3>
+
+                    <dl class="item-property">
+                        <dt>Description</dt>
+                        <dd>
+                            <p>{{ details[1] }}</p>
+                        </dd>
+                    </dl>
+                    <dl class="param param-feature">
+                        <dt>Rating</dt>
+                        <dd>{{ details[2] }} / 5</dd>
+                    </dl> <!-- item-property-hor .// -->
+                    <dl class="param param-feature">
+                        <dt>Author</dt>
+                        <dd>{{ details[0] }}</dd>
+
+                    </dl>
+                </article>
+            </aside>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
